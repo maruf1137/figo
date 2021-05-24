@@ -1,0 +1,124 @@
+.testimonial-section{
+
+}
+
+.testimonial{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 2rem;
+    grid-row-gap: 6rem;
+    margin-top: 8rem;
+
+    @media only screen and (max-width:$bp-medium){
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media only screen and (max-width:$bp-small){
+        grid-template-columns: 1fr;
+        // justify-items: center;
+    }
+
+    &__item{
+        @media only screen and (max-width:$bp-small){
+            width: 60%;
+            margin: 0 auto;
+        }
+
+        @media only screen and (max-width:$bp-smaller){
+            width: 100%;
+            // margin: 0 auto;
+        }
+        
+       &-1{
+
+       } 
+
+       &-2{
+            transform: translateY(-2rem);
+
+            @media only screen and (max-width:$bp-medium){
+                transform: translateY(0);
+            }
+       }
+
+       &-3{
+            
+       }
+
+       &-4{
+            transform: translateX(16rem) translateY(-2rem);
+
+            @media only screen and (max-width:$bp-medium){
+                transform: translateX(0) translateY(0);
+
+            }
+       }
+
+       &-5{
+            transform: translateX(16rem);
+
+            @media only screen and (max-width:$bp-medium){
+                transform: translateX(25rem);
+
+            }
+
+            @media only screen and (max-width:$bp-small){
+                transform: translateX(0);
+                justify-self: center;
+            }
+       }
+    }
+
+    &__content{
+        box-shadow: 0 .3rem 3rem rgba(0, 0, 0, 0.07);
+        padding: 1.5rem;
+        position: relative;
+
+        
+
+        &::after{
+            content: "";
+            display: block;
+            height: 2rem;
+            width: 2rem;
+            background-color: #fff;
+            position: absolute;
+            bottom: -.8rem;
+            left: 3rem;
+            transform: rotate(130deg);
+
+            @media only screen and (max-width:$bp-small){
+                left: 4rem;
+            }
+        }
+
+        .p-text{
+            font-size: 1.4rem;
+            color: #8E8E8E;
+            font-family: OpenSans-Regular;
+        }
+    }
+}
+
+.testimonial__user{
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    grid-gap: 2rem;
+    align-items: center;
+    padding: 0 1rem;
+
+    &--img{
+
+    }
+
+    &--name{
+        font-size: 1.6rem;
+        font-family: OpenSans-SemiBold;
+    }
+
+    &--email{
+        font-size: 1.4rem;
+        color: #8E8E8E;
+        font-family: OpenSans-SemiBoldItalic;
+    }
+}

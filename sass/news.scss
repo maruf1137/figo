@@ -1,0 +1,21 @@
+.news-section{
+
+}
+
+.news{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    grid-gap: 4rem;
+
+    &__item{
+        width: 100%;
+    }
+
+    &__img{
+        width: 100%;
+
+        img{
+            width: 100%;
+        }
+    }
+}

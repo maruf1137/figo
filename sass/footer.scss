@@ -1,0 +1,166 @@
+.footer-section{
+    padding: 8rem 0;
+    position: relative;
+}
+
+.footer{
+    display: grid;
+    grid-template-columns: 1fr repeat(3, max-content);
+    grid-gap: 8rem;
+    
+    @media only screen and (max-width:$bp-large){
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    }
+
+    @media only screen and (max-width:$bp-smaller){
+        // display: none;
+    }
+
+    &__left-img,
+    &__right-img{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 18rem;
+        height: 15rem;
+
+        @media only screen and (max-width:$bp-large){
+            display: none;
+        }
+
+        
+        
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__left-img{
+        // top: 2rem;
+        left: -3rem;
+    }
+
+    &__right-img{
+        // bottom: 2rem;
+        right: -3rem;
+    }
+
+    &__first{
+        // background-color: red;
+    }
+
+    &__logo-box{
+        width: 7.5rem;
+        height: 5rem;
+    }
+
+    &__logo{
+        width: 100%;
+        height: 100%;
+
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .p-text{
+        font-size: 2.2rem;
+    }
+
+    &__second{
+        // background-color: green;
+    }
+
+    &__third{
+        // background-color: red;
+    }
+
+    &__forth{
+        // background-color: green;
+    }
+}
+
+.footer-social{
+
+    &__list{
+        display: grid;
+        grid-template-columns: repeat(4, max-content);
+        grid-column-gap: 2rem;
+        align-items: center;
+    }
+
+    &__item{
+        // display: inline-block;
+    }
+
+    &__link{
+        background-image: linear-gradient(to top, rgba($color-primary-dark, .99),rgba($color-primary-light, .99));
+        display: inline-block;
+        width: 4rem;
+        height: 4rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 4px;
+    }
+
+    &__icon{
+        height: 2.5rem;
+        width: 2.5rem;
+        fill: #fff;
+    }
+}
+
+.footer-manu{
+
+    &__list{
+
+    }
+
+    &__item{
+        &:not(:last-child){
+            margin-bottom: 1.2rem;
+        }
+    }
+
+    &__link{
+        color: #000;
+        font-size: 2.4rem;
+    }
+}
+
+.footer-links{
+
+    &__list{
+
+    }
+
+    &__item{
+        &:not(:last-child){
+            margin-bottom: 1.2rem;
+        }
+    }
+
+    &__link{
+        color: #000;
+        font-size: 2.4rem;
+    }
+}
+
+.footer-contact{
+
+    &__list{
+
+    }
+
+    &__item{
+        color: #000;
+        font-size: 2.4rem;
+
+        &:not(:last-child){
+            margin-bottom: 1.2rem;
+        }
+    }
+}

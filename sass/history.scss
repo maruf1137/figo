@@ -1,0 +1,38 @@
+.history-section{
+
+}
+
+.history{
+    display: grid;
+    grid-template-columns: 1fr 56rem;
+    grid-gap: 10rem;
+    align-items: center;
+
+    @media only screen and (max-width:$bp-largest){
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+
+    @media only screen and (max-width:$bp-smaller){
+        grid-template-columns:100%;
+    }
+
+    &__item{
+        
+    }
+
+    &__img{
+        background-color: #F8FBF5;
+        width: 56rem;
+        height: 48rem;
+        border-radius: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img{
+            width: 43rem;
+            height: 43rem;
+        }
+    }
+}

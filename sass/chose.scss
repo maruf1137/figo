@@ -1,0 +1,38 @@
+.choose-section{
+
+}
+
+.choose{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    grid-gap: 6rem 4rem;
+    padding: 2rem 5rem;
+
+    @media only screen and (max-width:$bp-smaller){
+        grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+        padding: 2rem 0;
+    }
+
+    &__item{
+        text-align: center;
+        padding: 2rem;
+        border-radius: 1rem;
+        background-color: #F8FBF5;
+        cursor: pointer;
+        border-bottom: 3px solid transparent;
+        transition: all .5s;
+
+        &:hover{
+            box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.08);
+            border-color: $color-primmary;
+            background-color: #fff;
+        }
+    }
+
+    &__img{
+
+        img{
+
+        }
+    }
+}
